@@ -4,7 +4,11 @@ It is not possible currently to run stackdriver-agent on Ubuntu newer then 16.04
 We can, however, run in with docker on any Ubuntu version with. Specifically, 
 it will work well on Ubuntu 18.04, or just, whatever. 
 
-Run it with with docker on GCP instance: 
+**NOTE:** That assumes running it on GCP instances with properly configured 
+          service accounts. If it's not the case, you will need to set up 
+          some authorization. 
+
+Run it with docker on an instance: 
 
     docker run -d --restart=always \
       --name stackdriver-agent \
